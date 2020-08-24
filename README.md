@@ -1,36 +1,35 @@
-# automacao-calculadoraios-java-mobile
-Script de automacao de calculos basicos na calculadora do iOS usando Java, Selenium, Appium e jUnit.
+# automacao-calculadoraandroid-csharp-mobile
+Script de automacao para realizar calculos basicos na calculadora do Android usando C Sharp, Selenium, iText e NUnit. Criado no Visual Studio 2019.
 
 ### Cobertura dos testes:  ###
 *Descricao: 
 
-Realizar calculos basicos na calculadora do iOS no emulador.
+Realizar calculos basicos na calculadora do Android no emulador.
 
-Realizar calculos basicos na calculadora do iOS no smartphone.
+Realizar calculos basicos na calculadora do Android no smartphone.
 
 ## Tecnologias:
 * [Java Jdk 8](https://www.oracle.com/br/java/technologies/javase-downloads.html)
 * [Maven](https://maven.apache.org)
-* [Maven dependencias](https://mvnrepository.com)
 * [Appium](http://appium.io)
 * [Selenium](https://www.selenium.dev/projects/)
 * [Intellij Idea](https://www.jetbrains.com/pt-br/idea/)
-* [jUnit](https://junit.org/junit5/)
-* [MacOS X](https://www.apple.com/br/macos/what-is/)
-* [Xcode](https://apps.apple.com/br/app/xcode/id497799835?mt=12)
-* [Node](https://nodejs.org/en/)
-* [WebDriverAgent](https://github.com/facebookarchive/WebDriverAgent)
-* [iOS](https://www.apple.com/br/iphone/)
+* [Apk Info](https://play.google.com/store/apps/details?id=com.wt.apkinfo&hl=pt_BR)
 * [Android Studio](https://developer.android.com/studio)
+* [C Sharp](https://docs.microsoft.com/pt-br/dotnet/csharp/)
+* [NUnit](https://nunit.org)
+* [Visual Studio 2019](https://visualstudio.microsoft.com/pt-br/vs/)
+* [Marketplace Visual Studio](https://marketplace.visualstudio.com)
+* [iText](https://itextpdf.com/en)
 
 ## Dependências:
-* Selenium-java
-* jUnit 4
-* Commons-io
-* Cucumber-junit
-* Cucumber-java
-* Jxl
-* Poi-ooxml
+* NUnit
+* NUnit3TestAdapter 
+* Selenium.Support
+* Selenium.WebDriver 
+* Selenium.WebDriver.Chrome (Por padrao deixei o Chrome, mas pode baixar os outros plugins dos navegadores)
+* iTextSharp (Para criar evidencias em pdf)
+* Docx (Para criar evidencias em docx)
 * Appium
 
 ## Instruções de execução:
@@ -38,20 +37,16 @@ Realizar calculos basicos na calculadora do iOS no smartphone.
 ###  - App
 *Importante: 
 
-O app da calculadora do iOS utilizado para o teste deste projeto foi desenvolvido por terceiro e não por mim, caso execute com sucesso ou não, recomendo que após entender o código escrito, 
-instale outro arquivo do formato .ipa e adapte o projeto. 
+O app da calculadora é nativa do Android, não é necessario instalar desde que a versao do Android que voce vai testar tenha a calculadora instalada. 
 
-Mas deixei o codigo fonte (SimpleCalculator-master.zip) na pasta drivers/iOS caso tenha problemas com o BundleId, abra o codigo fonte e altere o BundleId na sua conta Apple ID.
+Nao é obrigatorio mas recomendado utilizar o APK Info para descobrir as informações como deviceName e appPackage. Tambem nao é obrigado a ter o Gmail configurado no Android, mas é recomendado para atualizações da plataforma.
 
-E obrigatorio voce ter conhecimento sobre o Apple ID, WebDriverAgent, Node, Appium e dependencias no MacOS, são exigências para automação nas plataformas da Apple.
-
-Se o seu Apple ID nao tiver perfil de desenvolvedor da Apple, voce tera problemas ao gerar um arquivo .ipa, e instala-lo no aparelho, recomendo abrir o projeto do codigo fonte da calculadora no Xcode e abri-lo 
-no Simulator ou Smartphone para instala-lo sem precisar gerar o arquivo .ipa. O driver do Simulator na classe MobileDriver ja esta configurado para executar sem pedir para instalar o app a cada execucao.
+Este projeto esta construido para executar no Android do Emulador do Android Studio e em algum aparelho fisico.
 
 ###  - Plataforma
 *Importante:
 
-O projeto foi criado no MacOS, não e para ser executado no Windows e no Linux. Automacoes com iOS so podem ser feitas na plataforma com o MacOS.
+O projeto foi criado no MacOS, e nao ha impedimento para executar no Windows ou Linux desde que tenha os aplicativos descritos em Dependencias.
 
 Os metodos para criar o driver Mobile estao na classe EmuladorDriver e MobileDriver.
 
@@ -65,16 +60,11 @@ Recomendado utilizar o Intellij Idea, mas pode usar o Eclipse IDE, Visual Studio
 Nao e necessario criar massas.
 
 ###  - Evidencias
-*Descricao:
-Apos a execucao as imagens de evidencias sao armazenadas na pasta screenshots..
+*Importante: As evidencias estao sendo salvas na pasta do Downloads do Mac ou Windows.
 
-Para visualizar as evidencias no documento pode usar o MS Office Word ou o LibreOffice
+*Descricao: A classe GeradorPDF.cs tira os screenshots e adiciona-os dentro de um documento em pdf e tambem salva-o dentro de Downloads do Mac ou Windows.
 
 ###  - Inicializar a automação
 *Descricao:
 
-Execute o Appium e o WebDriverAgent no Xcode.
-
-Abrir uma das classes ***Test.java no Intellij Idea ou no Eclipse.
-
-No caso para executar num smartphone, abra a classe Mobile Driver e altere o valor no campo "DeviceId".
+Execute o Appium e abra o Emulador do AS ou conecte o aparelho no computador.
