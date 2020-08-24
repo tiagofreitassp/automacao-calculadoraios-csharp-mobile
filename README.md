@@ -13,7 +13,6 @@ Realizar calculos basicos na calculadora do Android no smartphone.
 * [Maven](https://maven.apache.org)
 * [Appium](http://appium.io)
 * [Selenium](https://www.selenium.dev/projects/)
-* [Intellij Idea](https://www.jetbrains.com/pt-br/idea/)
 * [Apk Info](https://play.google.com/store/apps/details?id=com.wt.apkinfo&hl=pt_BR)
 * [Android Studio](https://developer.android.com/studio)
 * [C Sharp](https://docs.microsoft.com/pt-br/dotnet/csharp/)
@@ -50,7 +49,7 @@ O projeto foi criado no MacOS, e nao ha impedimento para executar no Windows ou 
 
 Os metodos para criar o driver Mobile estao na classe EmuladorDriver e MobileDriver.
 
-Recomendado utilizar o Intellij Idea, mas pode usar o Eclipse IDE, Visual Studio Code ou Spring Tools Suite.
+Recomendado utilizar o Visual Studio 2019.
 
 ###  - Fluxo
 *Descricao: Este script ira executar calculos simples como Soma, Subtracao, Multiplicacao e Divisao.
