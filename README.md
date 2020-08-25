@@ -26,10 +26,9 @@ Realizar calculos basicos na calculadora do Android no smartphone.
 * NUnit3TestAdapter 
 * Selenium.Support
 * Selenium.WebDriver 
-* Selenium.WebDriver.Chrome (Por padrao deixei o Chrome, mas pode baixar os outros plugins dos navegadores)
 * iTextSharp (Para criar evidencias em pdf)
 * Docx (Para criar evidencias em docx)
-* Appium
+* Appium.Webdriver
 
 ## Instruções de execução:
 
