@@ -91,7 +91,7 @@ namespace automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_Mo
         {
             try
             {
-                Thread.Sleep(3);
+                Thread.Sleep(4);
                 geradorPDF.evidenciaElemento("Digitar números");
                 mobileUtils.Clicar(calcMobileVariables.BtnUm);
                 mobileUtils.Clicar(calcMobileVariables.BtnSeis);
