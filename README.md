@@ -37,7 +37,7 @@ Realizar calculos basicos na calculadora do Android no smartphone.
 
 O app da calculadora é nativa do Android, não é necessario instalar desde que a versao do Android que voce vai testar tenha a calculadora instalada. 
 
-Nao é obrigatorio mas recomendado utilizar o APK Info para descobrir as informações como deviceName e appPackage. Tambem nao é obrigado a ter o Gmail configurado no Android, mas é recomendado para atualizações da plataforma.
+Nao é obrigatorio mas recomendado utilizar o APK Info para descobrir as informações como appActivity e appPackage. Tambem nao é obrigado a ter o Gmail configurado no Android, mas é recomendado para atualizações da plataforma.
 
 Este projeto esta construido para executar no Android do Emulador do Android Studio e em algum aparelho fisico.
 
