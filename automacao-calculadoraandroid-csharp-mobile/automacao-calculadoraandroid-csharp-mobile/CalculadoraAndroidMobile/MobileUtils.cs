@@ -2,7 +2,7 @@
 using automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_CalculadoraAndroidMobile;
 using NUnit.Framework;
 using OpenQA.Selenium.Appium.Android;
-using OpenQA.Selenium;
+using System.Threading;
 
 namespace automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_MobileUtils
 {
@@ -40,6 +40,7 @@ namespace automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_Mo
 
         public void ValidarTextoDoElemento(AndroidElement elemento, string texto)
         {
+            Thread.Sleep(1);
             string txtElement = ObterTextoDoElemento(elemento);
             Assert.AreEqual(txtElement, texto);
         }

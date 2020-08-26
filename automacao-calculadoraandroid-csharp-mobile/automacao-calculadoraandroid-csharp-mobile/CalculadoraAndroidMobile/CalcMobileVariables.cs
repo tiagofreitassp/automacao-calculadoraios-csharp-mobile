@@ -1,9 +1,4 @@
-﻿using System;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Remote;
-using OpenQA.Selenium.Appium;
-using OpenQA.Selenium.Appium.Android;
-using OpenQA.Selenium.Appium.Enums;
+﻿using OpenQA.Selenium.Appium.Android;
 
 namespace automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_CalcMobileVariables
 {
@@ -37,7 +32,6 @@ namespace automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_Ca
         public AndroidElement BtnSubtrair => _driver.FindElementById("com.google.android.calculator:id/op_sub");
         public AndroidElement BtnSomar => _driver.FindElementById("com.google.android.calculator:id/op_add");
 
-        public AndroidElement TxtResultadoPrevio => _driver.FindElementById("com.google.android.calculator:id/formula");
-        public AndroidElement TxtResultado => _driver.FindElementById("com.google.android.calculator:id/result_preview");
+        public AndroidElement TxtResultado => _driver.FindElementById("com.google.android.calculator:id/result_final");
     }
 }

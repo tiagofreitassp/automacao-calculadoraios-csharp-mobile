@@ -72,6 +72,7 @@ namespace automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_Ge
         {
             ITakesScreenshot ts = (ITakesScreenshot)_driver;
             byte[] imagem = ts.GetScreenshot().AsByteArray;
+            Console.WriteLine("Capturado o screenshot!");
             Image image = Image.GetInstance(imagem);
             image.ScaleToFit(520f, 520f);
             document.Add(image);
@@ -181,6 +182,7 @@ namespace automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_Ge
 
         public void evidenciaElemento(string passo)
         {
+            Thread.Sleep(1);
             print(passo);
         }
 

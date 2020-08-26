@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{A314158B-A070-4202-9322-2F5324F01E1B}|Default">
   <MonoDevelop.Ide.ItemProperties.automacao-calculadoraandroid-csharp-mobile PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="automacao-calculadoraandroid-csharp-mobile/CalculadoraAndroidMobile/MobileBasePage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="automacao-calculadoraandroid-csharp-mobile/CalculadoraAndroidMobile/CalcAndroidMobileTest.cs">
     <Files>
-      <File FileName="automacao-calculadoraandroid-csharp-mobile/CalculadoraAndroidMobile/CalcAndroidMobileTest.cs" Line="23" Column="10" />
-      <File FileName="automacao-calculadoraandroid-csharp-mobile/CalculadoraAndroidMobile/MobileDriver.cs" Line="6" Column="1" />
-      <File FileName="automacao-calculadoraandroid-csharp-mobile/CalculadoraAndroidMobile/CalcMobileVariables.cs" Line="20" Column="9" />
-      <File FileName="automacao-calculadoraandroid-csharp-mobile/CalculadoraAndroidMobile/MobileBasePage.cs" Line="30" Column="1" />
-      <File FileName="automacao-calculadoraandroid-csharp-mobile/CalculadoraAndroidMobile/MobileUtils.cs" Line="5" Column="23" />
-      <File FileName="automacao-calculadoraandroid-csharp-mobile/CalculadoraAndroidMobile/GeradorPDF.cs" Line="5" Column="24" />
+      <File FileName="automacao-calculadoraandroid-csharp-mobile/CalculadoraAndroidMobile/CalcAndroidMobileTest.cs" Line="23" Column="1" />
+      <File FileName="automacao-calculadoraandroid-csharp-mobile/CalculadoraAndroidMobile/MobileDriver.cs" Line="5" Column="1" />
+      <File FileName="automacao-calculadoraandroid-csharp-mobile/CalculadoraAndroidMobile/CalcMobileVariables.cs" Line="2" Column="1" />
+      <File FileName="automacao-calculadoraandroid-csharp-mobile/CalculadoraAndroidMobile/MobileBasePage.cs" Line="48" Column="36" />
+      <File FileName="automacao-calculadoraandroid-csharp-mobile/CalculadoraAndroidMobile/MobileUtils.cs" Line="6" Column="1" />
+      <File FileName="automacao-calculadoraandroid-csharp-mobile/CalculadoraAndroidMobile/GeradorPDF.cs" Line="181" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +16,7 @@
             <Node name="automacao-calculadoraandroid-csharp-mobile" expanded="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="CalculadoraAndroidMobile" expanded="True">
-                <Node name="MobileBasePage.cs" selected="True" />
+                <Node name="CalcAndroidMobileTest.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -25,7 +25,13 @@
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
           <Node name="automacao-calculadoraandroid-csharp-mobile" expanded="True">
-            <Node name="automacao-calculadoraandroid-csharp-mobile" selected="True" />
+            <Node name="automacao-calculadoraandroid-csharp-mobile" expanded="True">
+              <Node name="automacao_calculadoraandroid_csharp_CalculadoraAndroidMobile_mobile_CalcAndroidMobileTest" expanded="True">
+                <Node name="CalcAndroidMobileTest" expanded="True">
+                  <Node name="Test3_Multiplicacao" selected="True" />
+                </Node>
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>

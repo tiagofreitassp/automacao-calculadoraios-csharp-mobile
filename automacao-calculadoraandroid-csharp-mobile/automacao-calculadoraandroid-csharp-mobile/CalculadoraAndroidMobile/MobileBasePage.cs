@@ -5,10 +5,6 @@ using automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_Mobile
 using automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_GeradorPDF;
 using OpenQA.Selenium.Appium.Android;
 using System.Threading;
-using OpenQA.Selenium.Remote;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Support;
-using SeleniumExtras.PageObjects;
 
 namespace automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_MobileBasePage
 {
@@ -19,13 +15,14 @@ namespace automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_Mo
         public MobileUtils mobileUtils;
         public GeradorPDF geradorPDF;
 
-        public MobileBasePage(AndroidDriver<AndroidElement> driver)
+        public MobileBasePage(AndroidDriver<AndroidElement> driver, string cenario)
         {
             _driver = driver;
-            PageFactory.InitElements(_driver, this);
             calcMobileVariables = new CalcMobileVariables(_driver);
             mobileUtils = new MobileUtils(_driver);
-            //geradorPDF = new GeradorPDF(_driver, "Evidencias MyStore Web_" + mobileUtils.GerarDataHoraFormatada(), "Realizar compra online");
+
+            string nomeDaEvidencia = "Evidencias Calculadora Android_"+ cenario +"_"+ mobileUtils.GerarDataHoraFormatada();
+            geradorPDF = new GeradorPDF(_driver, nomeDaEvidencia, cenario);
         }
 
         public void Soma()
@@ -33,52 +30,118 @@ namespace automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_Mo
             try
             {
                 Thread.Sleep(3);
-                Console.WriteLine("Soma");
-                _driver.FindElementById("com.google.android.calculator:id/digit_2").Click();
-        //mobileUtils.Clicar(calcMobileVariables.BtnDois);
-        //mobileUtils.Clicar(calcMobileVariables.BtnSomar);
-        //mobileUtils.Clicar(calcMobileVariables.BtnTres);
-    }
+                geradorPDF.evidenciaElemento("Digitar números");
+                mobileUtils.Clicar(calcMobileVariables.BtnUm);
+                mobileUtils.Clicar(calcMobileVariables.BtnCinco);
+                mobileUtils.Clicar(calcMobileVariables.BtnNove);
+
+                mobileUtils.Clicar(calcMobileVariables.BtnSomar);
+                geradorPDF.evidenciaElemento("Clicar em somar");
+
+                mobileUtils.Clicar(calcMobileVariables.BtnNove);
+                mobileUtils.Clicar(calcMobileVariables.BtnSeis);
+                mobileUtils.Clicar(calcMobileVariables.BtnTres);
+                geradorPDF.evidenciaElemento("Clicar em igual");
+
+                mobileUtils.Clicar(calcMobileVariables.BtnIgual);
+
+                geradorPDF.evidenciaElemento("Validar resultado");
+                mobileUtils.ValidarTextoDoElemento(calcMobileVariables.TxtResultado, "1122");
+            }
             catch (Exception e)
             {
                 Console.WriteLine("Erro lancado no metodo Soma: " + e.Message);
             }
+            geradorPDF.finishPdf();
         }
 
         public void Subtracao()
         {
             try
             {
+                Thread.Sleep(3);
+                geradorPDF.evidenciaElemento("Digitar números");
+                mobileUtils.Clicar(calcMobileVariables.BtnDois);
+                mobileUtils.Clicar(calcMobileVariables.BtnZero);
+                mobileUtils.Clicar(calcMobileVariables.BtnDois);
+                mobileUtils.Clicar(calcMobileVariables.BtnUm);
 
+                mobileUtils.Clicar(calcMobileVariables.BtnSubtrair);
+                geradorPDF.evidenciaElemento("Clicar em subtrair");
+
+                mobileUtils.Clicar(calcMobileVariables.BtnUm);
+                mobileUtils.Clicar(calcMobileVariables.BtnNove);
+                mobileUtils.Clicar(calcMobileVariables.BtnOito);
+                mobileUtils.Clicar(calcMobileVariables.BtnOito);
+                geradorPDF.evidenciaElemento("Clicar em igual");
+
+                mobileUtils.Clicar(calcMobileVariables.BtnIgual);
+
+                geradorPDF.evidenciaElemento("Validar resultado");
+                mobileUtils.ValidarTextoDoElemento(calcMobileVariables.TxtResultado, "33");
             }
             catch (Exception e)
             {
                 Console.WriteLine("Erro lancado no metodo Subtracao: " + e.Message);
             }
+            geradorPDF.finishPdf();
         }
 
         public void Multiplicacao()
         {
             try
             {
+                Thread.Sleep(3);
+                geradorPDF.evidenciaElemento("Digitar números");
+                mobileUtils.Clicar(calcMobileVariables.BtnUm);
+                mobileUtils.Clicar(calcMobileVariables.BtnSeis);
+                mobileUtils.Clicar(calcMobileVariables.BtnZero);
 
+                mobileUtils.Clicar(calcMobileVariables.BtnMultiplicar);
+                geradorPDF.evidenciaElemento("Clicar em multiplicar");
+
+                mobileUtils.Clicar(calcMobileVariables.BtnCinco);
+                mobileUtils.Clicar(calcMobileVariables.BtnSeis);
+                mobileUtils.Clicar(calcMobileVariables.BtnZero);
+                geradorPDF.evidenciaElemento("Clicar em igual");
+
+                mobileUtils.Clicar(calcMobileVariables.BtnIgual);
+
+                geradorPDF.evidenciaElemento("Validar resultado");
+                mobileUtils.ValidarTextoDoElemento(calcMobileVariables.TxtResultado, "89600");
             }
             catch (Exception e)
             {
                 Console.WriteLine("Erro lancado no metodo Multiplicacao: " + e.Message);
             }
+            geradorPDF.finishPdf();
         }
 
         public void Divisao()
         {
             try
             {
+                Thread.Sleep(3);
+                geradorPDF.evidenciaElemento("Digitar números");
+                mobileUtils.Clicar(calcMobileVariables.BtnSete);
+                mobileUtils.Clicar(calcMobileVariables.BtnDois);
 
+                mobileUtils.Clicar(calcMobileVariables.BtnDividir);
+                geradorPDF.evidenciaElemento("Clicar em dividir");
+
+                mobileUtils.Clicar(calcMobileVariables.BtnDois);
+                geradorPDF.evidenciaElemento("Clicar em igual");
+
+                mobileUtils.Clicar(calcMobileVariables.BtnIgual);
+
+                geradorPDF.evidenciaElemento("Validar resultado");
+                mobileUtils.ValidarTextoDoElemento(calcMobileVariables.TxtResultado, "36");
             }
             catch (Exception e)
             {
                 Console.WriteLine("Erro lancado no metodo Divisao: " + e.Message);
             }
+            geradorPDF.finishPdf();
         }
     }
 }
