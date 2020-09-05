@@ -19,6 +19,7 @@ namespace automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_Ca
             capabilities.AddAdditionalCapability("appActivity", "com.android.calculator2.Calculator");
 
             driver = new AndroidDriver<AndroidElement>(new Uri("http://127.0.0.1:4723/wd/hub"), capabilities);
+            Console.WriteLine("Driver inicializado com sucesso!");
         }
 
         public void FecharDriverWeb()
