@@ -1,15 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "XKhB+uY3k6Hl8Zrwm7KY5oFovmMBTu69z9al7Dk6nRT9dROlQJXMcJ38QtsaVf1MCNjHc/sRhjo57zL3V9pelA==",
+  "dgSpecHash": "y+u+cBOUutUDxQTFOpwKWhoq0a/pUQ2LOkfwHhEiUtL7h79mKVA3kjOG17cI0fQnhinzlM6s56KcrOruo9kpgg==",
   "success": true,
   "projectFilePath": "/Users/tiago.freitas/Documents/GitHub/automacao-calculadoraandroid-csharp-mobile/automacao-calculadoraandroid-csharp-mobile/automacao-calculadoraandroid-csharp-mobile/automacao-calculadoraandroid-csharp-mobile.csproj",
   "expectedPackageFiles": [
-    "/Users/tiago.freitas/.nuget/packages/appium.webdriver/4.1.1/appium.webdriver.4.1.1.nupkg.sha512",
+    "/Users/tiago.freitas/.nuget/packages/appium.webdriver/4.2.1/appium.webdriver.4.2.1.nupkg.sha512",
+    "/Users/tiago.freitas/.nuget/packages/bouncycastle/1.8.6.1/bouncycastle.1.8.6.1.nupkg.sha512",
     "/Users/tiago.freitas/.nuget/packages/castle.core/4.3.1/castle.core.4.3.1.nupkg.sha512",
     "/Users/tiago.freitas/.nuget/packages/dotnetseleniumextras.pageobjects/3.11.0/dotnetseleniumextras.pageobjects.3.11.0.nupkg.sha512",
     "/Users/tiago.freitas/.nuget/packages/dotnetseleniumextras.pageobjects.core/3.12.0/dotnetseleniumextras.pageobjects.core.3.12.0.nupkg.sha512",
     "/Users/tiago.freitas/.nuget/packages/dotnetseleniumextras.waithelpers/3.11.0/dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
-    "/Users/tiago.freitas/.nuget/packages/itextsharp/5.5.13.1/itextsharp.5.5.13.1.nupkg.sha512",
+    "/Users/tiago.freitas/.nuget/packages/itextsharp/5.5.13.2/itextsharp.5.5.13.2.nupkg.sha512",
     "/Users/tiago.freitas/.nuget/packages/microsoft.codecoverage/16.7.1/microsoft.codecoverage.16.7.1.nupkg.sha512",
     "/Users/tiago.freitas/.nuget/packages/microsoft.dotnet.internalabstractions/1.0.0/microsoft.dotnet.internalabstractions.1.0.0.nupkg.sha512",
     "/Users/tiago.freitas/.nuget/packages/microsoft.net.test.sdk/16.7.1/microsoft.net.test.sdk.16.7.1.nupkg.sha512",
@@ -81,7 +82,17 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'iTextSharp 5.5.13.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "message": "Package 'BouncyCastle 1.8.6.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "BouncyCastle",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'iTextSharp 5.5.13.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "iTextSharp",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"

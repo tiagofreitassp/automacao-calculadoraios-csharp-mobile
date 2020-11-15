@@ -8,7 +8,7 @@
             <Node name="automacao-calculadoraandroid-csharp-mobile" expanded="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="CalculadoraAndroidMobile" expanded="True">
-                <Node name="GeradorPDF.cs" selected="True" />
+                <Node name="CalcAndroidMobileTest.cs" selected="True" />
               </Node>
             </Node>
           </Node>

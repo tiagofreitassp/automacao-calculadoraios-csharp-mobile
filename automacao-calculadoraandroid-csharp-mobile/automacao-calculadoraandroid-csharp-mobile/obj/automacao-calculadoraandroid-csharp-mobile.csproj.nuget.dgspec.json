@@ -38,7 +38,7 @@
           "dependencies": {
             "Appium.WebDriver": {
               "target": "Package",
-              "version": "[4.1.1, )"
+              "version": "[4.2.1, )"
             },
             "DotNetSeleniumExtras.PageObjects": {
               "target": "Package",
@@ -70,7 +70,7 @@
             },
             "iTextSharp": {
               "target": "Package",
-              "version": "[5.5.13.1, )"
+              "version": "[5.5.13.2, )"
             },
             "nunit": {
               "target": "Package",
@@ -92,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Appium.WebDriver/4.1.1": {
+      "Appium.WebDriver/4.2.1": {
         "type": "package",
         "dependencies": {
           "Castle.Core": "4.3.1",
@@ -17,6 +17,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Appium.Net.dll": {}
+        }
+      },
+      "BouncyCastle/1.8.6.1": {
+        "type": "package",
+        "compile": {
+          "lib/BouncyCastle.Crypto.dll": {}
+        },
+        "runtime": {
+          "lib/BouncyCastle.Crypto.dll": {}
         }
       },
       "Castle.Core/4.3.1": {
@@ -77,8 +86,11 @@
           "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll": {}
         }
       },
-      "iTextSharp/5.5.13.1": {
+      "iTextSharp/5.5.13.2": {
         "type": "package",
+        "dependencies": {
+          "BouncyCastle": "1.8.6.1"
+        },
         "compile": {
           "lib/itextsharp.dll": {}
         },
@@ -1315,19 +1327,32 @@
     }
   },
   "libraries": {
-    "Appium.WebDriver/4.1.1": {
-      "sha512": "OPA9VRnpuvFgFKjLrlOIFpR+mK7bL4v6rM10vNpggNW3wxrEGrteW1uYYcNPrzLV30Z5OMFb1qdevei8oAKeNg==",
+    "Appium.WebDriver/4.2.1": {
+      "sha512": "eiKCSSLo+5o9iHYtVcZAaYQKm1pBc3gBDqevmvCrlnqy/vxFLO1dRdpy7FM+xGCYGl3x7r1kj/pYuXhKR9Vi9Q==",
       "type": "package",
-      "path": "appium.webdriver/4.1.1",
+      "path": "appium.webdriver/4.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "appium-icon.png",
-        "appium.webdriver.4.1.1.nupkg.sha512",
+        "appium.webdriver.4.2.1.nupkg.sha512",
         "appium.webdriver.nuspec",
         "lib/net45/Appium.Net.dll",
         "lib/netstandard2.0/Appium.Net.dll"
+      ]
+    },
+    "BouncyCastle/1.8.6.1": {
+      "sha512": "rkqpuKmJkdcfTMBkIj1b5nMdBAWKwAyh+I/BQYeqqSD2jkIlhwc9qBNKmSbnpmmm5c29qHZGLpvBSTNWvDLtQA==",
+      "type": "package",
+      "path": "bouncycastle/1.8.6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "bouncycastle.1.8.6.1.nupkg.sha512",
+        "bouncycastle.nuspec",
+        "lib/BouncyCastle.Crypto.dll"
       ]
     },
     "Castle.Core/4.3.1": {
@@ -1400,16 +1425,16 @@
         "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll"
       ]
     },
-    "iTextSharp/5.5.13.1": {
-      "sha512": "xqzsYEYW/nMDjCtAXM5cl9fWil/Ju3HEGbsmoTKtltJc3M/9HNJzg++bCIOHm5uZITvRmZJWMO+S2u1yNG0gQg==",
+    "iTextSharp/5.5.13.2": {
+      "sha512": "8m9oT1nh9F4Z1tzWUey/8lEzZtMGFCDXQY5+8/SSmPgUWAAAWniRo8pimKUZyteNqJr5vtFBxjAhRwLxG7Q0zQ==",
       "type": "package",
-      "path": "itextsharp/5.5.13.1",
+      "path": "itextsharp/5.5.13.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "gnu-agpl-v3.0.md",
-        "itextsharp.5.5.13.1.nupkg.sha512",
+        "itextsharp.5.5.13.2.nupkg.sha512",
         "itextsharp.nuspec",
         "lib/iTextSharp.xml",
         "lib/itextsharp.dll",
@@ -4767,7 +4792,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Appium.WebDriver >= 4.1.1",
+      "Appium.WebDriver >= 4.2.1",
       "DotNetSeleniumExtras.PageObjects >= 3.11.0",
       "DotNetSeleniumExtras.PageObjects.Core >= 3.12.0",
       "DotNetSeleniumExtras.WaitHelpers >= 3.11.0",
@@ -4775,7 +4800,7 @@
       "NUnit3TestAdapter >= 3.17.0",
       "Selenium.Support >= 3.141.0",
       "Selenium.WebDriver >= 3.141.0",
-      "iTextSharp >= 5.5.13.1",
+      "iTextSharp >= 5.5.13.2",
       "nunit >= 3.12.0"
     ]
   },
@@ -4816,7 +4841,7 @@
         "dependencies": {
           "Appium.WebDriver": {
             "target": "Package",
-            "version": "[4.1.1, )"
+            "version": "[4.2.1, )"
           },
           "DotNetSeleniumExtras.PageObjects": {
             "target": "Package",
@@ -4848,7 +4873,7 @@
           },
           "iTextSharp": {
             "target": "Package",
-            "version": "[5.5.13.1, )"
+            "version": "[5.5.13.2, )"
           },
           "nunit": {
             "target": "Package",
@@ -4870,7 +4895,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -4879,7 +4904,17 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'iTextSharp 5.5.13.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "message": "Package 'BouncyCastle 1.8.6.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "BouncyCastle",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'iTextSharp 5.5.13.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "iTextSharp",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
