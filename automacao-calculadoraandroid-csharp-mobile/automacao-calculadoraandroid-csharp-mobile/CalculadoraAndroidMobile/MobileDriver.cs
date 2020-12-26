@@ -22,6 +22,19 @@ namespace automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_Ca
             Console.WriteLine("Driver inicializado com sucesso!");
         }
 
+        //Este script não vai executar no emulador, criei o metodo abaixo apenas para reaproveitar ao criar para o emulador
+        //public void CriarDriverAndroidEmulador()
+        //{
+        //    capabilities.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
+        //    capabilities.AddAdditionalCapability(MobileCapabilityType.PlatformVersion, "9");
+        //    capabilities.AddAdditionalCapability(MobileCapabilityType.DeviceName, "emulator-5554");
+        //    capabilities.AddAdditionalCapability("appPackage", "com.android.calculator2");
+        //    capabilities.AddAdditionalCapability("appActivity", "com.android.calculator2.Calculator");
+
+        //    driver = new AndroidDriver<AndroidElement>(new Uri("http://127.0.0.1:4723/wd/hub"), capabilities);
+        //    Console.WriteLine("Driver inicializado com sucesso!");
+        //}
+
         public void FecharDriverWeb()
         {
             driver.Quit();
