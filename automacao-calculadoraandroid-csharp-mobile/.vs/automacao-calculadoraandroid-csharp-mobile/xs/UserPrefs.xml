@@ -8,7 +8,7 @@
             <Node name="automacao-calculadoraandroid-csharp-mobile" expanded="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="CalculadoraAndroidMobile" expanded="True">
-                <Node name="MobileDriver.cs" selected="True" />
+                <Node name="CalcAndroidMobileTest.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -16,13 +16,7 @@
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="automacao-calculadoraandroid-csharp-mobile" expanded="True">
-            <Node name="automacao-calculadoraandroid-csharp-mobile" expanded="True">
-              <Node name="automacao_calculadoraandroid_csharp_CalculadoraAndroidMobile_mobile_CalcAndroidMobileTest" expanded="True">
-                <Node name="CalcAndroidMobileTest" selected="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="automacao-calculadoraandroid-csharp-mobile" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
