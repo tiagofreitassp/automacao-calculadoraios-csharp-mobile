@@ -1,11 +1,13 @@
 ﻿using System;
 using automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_CalculadoraAndroidMobile;
-using OpenQA.Selenium.Appium.Android;
 using System.IO;
 using System.Threading;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Appium.Android;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using NUnit.Framework;
+using NUnit.Framework.Interfaces;
 
 namespace automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_GeradorPDF
 {
@@ -164,16 +166,19 @@ namespace automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_Ge
             BaseColor cor = BaseColor.GREEN;
             String resultado = "Evidencias MyStore_" + PegarDataHoraFormatada();
             String novoNome = "Evidencia com novo nome";
-            //if (cenario.getStatus().toString().equals("FAILED"))
-            //{
-            //    cor = BaseColor.RED;
-            //    resultado = "__FAILED";
-            //}
-            //else
-            //{
-            //    resultado = "__PASSED";
-            //}
-            //addFormatedText("STATUS DO CENARIO: " + cenario.getStatus(), FontFactory.TIMES_BOLDITALIC, 16f, 1, cor);
+
+            bool status = TestContext.CurrentContext.Result.Equals(TestStatus.Failed);
+            if (status)
+            {
+                cor = BaseColor.RED;
+                resultado = "__FAILED";
+            }
+            else
+            {
+                resultado = "__PASSED";
+            }
+
+            addFormatedText("STATUS DO CENARIO: " + resultado, FontFactory.TIMES_BOLDITALIC, 16f, 1, cor);
             document.Close();
             novoNome = arqEvidencia.Replace(".pdf", resultado + ".pdf");
             //return new File(arqEvidencia).Replace(new File(novoNome));

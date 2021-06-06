@@ -22,7 +22,7 @@ namespace automacao_calculadoraandroid_csharp_mobile_CalculadoraAndroidMobile_Ca
             Console.WriteLine("Driver inicializado com sucesso!");
         }
 
-        //Este script não vai executar no emulador, criei o metodo abaixo apenas para reaproveitar ao criar para o emulador
+        //Este script não vai executar no emulador, pois os elementos do Smartphone são diferentes do emulador, criei o metodo abaixo apenas para reaproveitar ao criar para o emulador
         //public void CriarDriverAndroidEmulador()
         //{
         //    capabilities.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
